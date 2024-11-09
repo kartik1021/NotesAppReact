@@ -10,23 +10,26 @@ export const Sidebar = () => {
     }
 
   return (
-    <aside className="flex flex-col gap-3 border-r-2 border-gray-100 w-[150px] h-screen p-3">
-      <NavLink className={getStyles} to="/">
-        <span class="material-icons">home</span>
-        <span>Home</span>
-      </NavLink>
-      <NavLink className={getStyles} to="/archive">
-        <span class="material-icons-outlined">archive</span>
-        <span>Archived</span>
-      </NavLink>
-      <NavLink className={getStyles} to="important">
-        <span class="material-icons-outlined">label_important</span>
-        <span>Important</span>
-      </NavLink>
-      <NavLink className={getStyles} to="bin">
-        <span class="material-icons-outlined">delete</span>
-        <span>Bin</span>
-      </NavLink>
-    </aside>
+    <aside className="hidden sm:flex flex-col gap-3 border-r-2 border-gray-100 w-[80px] sm:w-[100px] md:w-[150px] lg:w-[200px] h-screen p-3">
+  <NavLink className={getStyles} to="/">
+    <span className="material-icons">home</span>
+    <span className="hidden md:inline">Home</span> {/* Show label only on medium and larger screens */}
+  </NavLink>
+  
+  <NavLink className={getStyles} to="/archive">
+    <span className="material-icons-outlined">archive</span>
+    <span className="hidden md:inline">Archived</span> {/* Show label only on medium and larger screens */}
+  </NavLink>
+
+  <NavLink className={getStyles} to="/important">
+    <span className="material-icons-outlined">label_important</span>
+    <span className="hidden md:inline">Important</span> {/* Show label only on medium and larger screens */}
+  </NavLink>
+  
+  <NavLink className={getStyles} to="/bin">
+    <span className="material-icons-outlined">delete</span>
+    <span className="hidden md:inline">Bin</span> {/* Show label only on medium and larger screens */}
+  </NavLink>
+</aside>
   );
 };

@@ -46,7 +46,7 @@ export const NotesCard = ({id,title,text,isPinned})=>{
     }
     
     return(
-        <div className="w-56 border border-neutral-400 p-2 rounded-md w-[300px]" key={id}>
+        <div className="w-full sm:w-[48%] md:w-[30%] lg:w-[22%] border border-neutral-400 p-2 rounded-md" key={id}>
                                         <div className="flex justify-between border-b-2">
                                             <p>{title}</p>
                                             {
