@@ -6,7 +6,7 @@ import { NotesCard } from "../../components/NotesCard"
 
 export const Archive = ()=>{
 
-    const { title, text, notes,archive ,notesDispatch } = useNotes();
+    const {archive} = useNotes();
 
     return (
         <Fragment>

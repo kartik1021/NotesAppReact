@@ -6,7 +6,7 @@ import { NotesCard } from "../../components/NotesCard"
 
 export const Bin = ()=>{
 
-    const { title, text, notes,archive,bin ,notesDispatch } = useNotes();
+    const { bin} = useNotes();
 
 
     return (

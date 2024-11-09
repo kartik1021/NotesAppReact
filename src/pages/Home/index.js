@@ -1,11 +1,11 @@
 import { Navbar } from "../../components/Navbar";
-import { Fragment, useReducer, useState } from "react";
+import { Fragment} from "react";
 import { Sidebar } from "../../components/Sidebar";
 import { NotesCard } from "../../components/NotesCard";
 import { useNotes } from "../../context/notes-context";
 
 export const Home = () => {
-  const { title, text, notes,archive ,notesDispatch } = useNotes();
+  const { title, text, notes,notesDispatch } = useNotes();
 
   const onTitleChange = (e) => {
     return notesDispatch({
@@ -55,7 +55,7 @@ export const Home = () => {
               placeholder="Enter Text"
             />
             <button
-              disabled={title.length == 0}
+              disabled={title.length === 0}
               onClick={onAddClick}
               className="w-7 h-7 absolute bottom-0 right-0 bg-indigo-800 text-slate-50 rounded-full"
             >
